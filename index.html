@@ -15,6 +15,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="flex items-center justify-center">
@@ -35,7 +36,7 @@
             />
           </div>
 
-          <form id="registroForm">
+          <form id="loginForm">
             <div class="py-2">
               <span class="mb-2 text-md font-bold text-azul-intermoney"
                 >Correo electrónico</span
@@ -63,11 +64,7 @@
 
             <div class="flex mt-4">
               <div class="justify-center text-center" style="flex: 1">
-                <button
-                  type="submit"
-                  class="btn bg-[#760f20F]"
-                  onclick="location.href='dashboard.html';"
-                >
+                <button type="submit" class="btn bg-[#760f20F]">
                   Iniciar sesión
                 </button>
               </div>
@@ -85,38 +82,10 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("registroForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
-
-            // Obtén los valores de los campos de entrada
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("pass").value;
-
-            // Crea un objeto con los datos del formulario
-            const data = {
-              email: email,
-              password: password,
-            };
-
-            // Haz una solicitud POST a tu archivo PHP
-            fetch("C:/Users/USUARIO/Desktop/front-fesc/create-user.php", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
-              .then((response) => response.json())
-              .then((data) => console.log(data))
-              .catch((error) => {
-                console.error("Error:", error);
-              });
-          });
-      });
-    </script>
+    <div id="errorDiv" class="toast toast-end" style="display: none">
+      <div class="alert alert-error">
+        <span class="text-white">Las credenciales son incorrectas</span>
+      </div>
+    </div>
   </body>
 </html>
