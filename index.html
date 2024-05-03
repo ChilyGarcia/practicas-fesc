@@ -31,15 +31,15 @@
           <div class="flex items-center justify-center">
             <img
               class="w-[350px] h-[60px] mb-3 text-4xl"
-              src="C:\Users\USUARIO\Desktop\front-fesc\public\images\logo-intermoney.png"
+              src="C:\Users\USUARIO\Desktop\front-fesc\public\icons\fesc-icon.png"
             />
           </div>
 
-          <form>
+          <form id="registroForm">
             <div class="py-2">
-              <span class="mb-2 text-md font-bold text-azul-intermoney">
-                Correo electrónico
-              </span>
+              <span class="mb-2 text-md font-bold text-azul-intermoney"
+                >Correo electrónico</span
+              >
               <input
                 type="email"
                 class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 dark:border-gray-300 dark:bg-white dark:placeholder-gray-500 shadow-md"
@@ -49,9 +49,9 @@
               />
             </div>
             <div class="py-2">
-              <span class="mb-2 text-md font-bold text-azul-intermoney">
-                Contraseña
-              </span>
+              <span class="mb-2 text-md font-bold text-azul-intermoney"
+                >Contraseña</span
+              >
               <input
                 type="password"
                 name="password"
@@ -65,7 +65,7 @@
               <div class="justify-center text-center" style="flex: 1">
                 <button
                   type="submit"
-                  class="btn bg-azul-intermoney text-white p-2 w-32 hover:bg-white hover:border hover:border-azul-intermoney hover:text-azul-intermoney"
+                  class="btn bg-base-200 text-white p-2 w-32 hover:bg-white hover:border hover:border-azul-intermoney hover:text-azul-intermoney"
                 >
                   Continuar
                 </button>
@@ -84,17 +84,10 @@
 
           <div class="flex flex-col justify-center items-center">
             <a
-              href="/pages/authentication/forgot"
-              class="link mt-8 no-underline text-xs"
-            >
-              ¿Olvidaste tu contraseña?
-            </a>
-            <a
               href="/pages/authentication/register"
               class="link no-underline text-xs pt-2"
+              >¿No tienes una cuenta?</a
             >
-              ¿No tienes una cuenta?
-            </a>
           </div>
         </div>
       </div>
@@ -105,5 +98,39 @@
         <span class="text-white">Las credenciales son incorrectas</span>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("registroForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+
+            // Obtén los valores de los campos de entrada
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+
+            // Crea un objeto con los datos del formulario
+            const data = {
+              email: email,
+              password: password,
+            };
+
+            // Haz una solicitud POST a tu archivo PHP
+            fetch("C:/Users/USUARIO/Desktop/front-fesc/create-user.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => console.log(data))
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          });
+      });
+    </script>
   </body>
 </html>

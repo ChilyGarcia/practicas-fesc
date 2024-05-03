@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.4/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex items-center justify-center">
+        <div class="relative w-[500px] flex flex-col m-16 space-y-8 bg-white shadow-2xl rounded-2xl min-w-[815px]">
+          <div class="card-body items-center">
+            <img class="card-title w-[300px] h-[55px] mb-3 text-4xl" src="C:\Users\USUARIO\Desktop\front-fesc\public\images\logo-intermoney.png"></img>
+      
+            <div class="flex flex-col items-start">
+              <label class="text-azul-intermoney font-semibold">
+                Crear una cuenta de Intermoney
+              </label>
+            </div>
+      
+            <form>
+              <div class="flex justify-between">
+                <div class="flex flex-col">
+                  <div class="mt-2">
+                    <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
+                      Nombres
+                    </span>
+                    <input name="first_name" type="text" placeholder="Juan" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                  </div>
+      
+                  <div class="mt-2">
+                    <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
+                      Correo electrónico
+                    </span>
+                    <input name="email" type="text" placeholder="ejemplo@gmail.com" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                  </div>
+      
+                  <div class="mt-2">
+                    <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
+                      Contraseña
+                    </span>
+                    <input name="password" type="text" placeholder="********" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                  </div>
+                </div>
+      
+                <div class="flex flex-col mt-2">
+                  <div class="justify-center items-center">
+                    <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
+                      Apellidos
+                    </span>
+                    <input name="last_name" type="text" placeholder="García" class="input input-bordered w-full max-w-xs ml-8">
+                  </div>
+      
+                  <div class="mt-2">
+                    <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
+                      Teléfono
+                    </span>
+                    <input name="phone_number" type="text" placeholder="3209494848" class="input input-bordered w-full max-w-xs ml-8">
+                  </div>
+                </div>
+              </div>
+      
+              <div class="flex justify-between mt-12" style="display: flex; justify-content: center">
+                <button type="submit" class="btn bg-azul-intermoney text-white p-2 w-32 hover:bg-white hover:border hover:border-azul-intermoney hover:text-azul-intermoney justify-center items-center mr-4">
+                  Registrarse
+                </button>
+      
+                <a href="/pages/authentication/login" type="button" class="btn bg-white border-solid border-2 border-azul-intermoney text-azul-intermoney hover:bg-azul-intermoney hover:text-white ml-4">
+                  Volver
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="toast toast-end">
+        <div class="alert alert-error">
+          <span class="text-white">
+            No se ha podido hacer el registro
+          </span>
+        </div>
+      </div>
+</body>
+</html>
