@@ -30,7 +30,7 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("loginForm")
-    .addEventListener("submit", function (event) {
+    ?.addEventListener("submit", function (event) {
       event.preventDefault();
 
       var formData = new FormData(this);
@@ -60,6 +60,53 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 2000);
           } else {
             window.location.href = "dashboard.html";
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+});
+
+document.getElementById("btnLogOut")?.addEventListener("click", function () {
+  console.log("El botón Cerrar sesión ha sido presionado.");
+
+  fetch("http://localhost:8080/api/logOut", {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      window.location.href = "index.html";
+    })
+    .catch((error) => console.error("Error:", error));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("uploadForm")
+    ?.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(this);
+
+      fetch("http://localhost:8080/api/magazine", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Error en la solicitud");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          if (data.pdfURL) {
+            // Abre el PDF en una nueva ventana del navegador
+            window.open(`http://localhost:8080${data.pdfURL}`, "_blank");
+          } else {
+            console.error("No se ha proporcionado la URL del PDF");
           }
         })
         .catch((error) => {

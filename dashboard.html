@@ -58,7 +58,7 @@
             class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a onclick="location.href='index.html';">
+              <a id="btnLogOut">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1035,5 +1035,12 @@
         </div>
       </div>
     </div>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required />
+      <button type="submit">Subir PDF</button>
+    </form>
+
+    <script src="script.js"></script>
   </body>
 </html>
