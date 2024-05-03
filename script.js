@@ -112,5 +112,21 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => {
           console.error("Error:", error);
         });
+
+      fetch("http://localhost:8080/api/user")
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("No has iniciado sesión");
+          }
+        })
+        .then((user) => {
+          console.log(user);
+          // Aquí puedes hacer lo que quieras con la información del usuario
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     });
 });
