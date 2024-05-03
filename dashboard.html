@@ -108,7 +108,9 @@
                     <div class="flex w-full">
                       <label class="form-control w-full">
                         <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
+                          <span class="label-text"
+                            >Descripcion de la revista</span
+                          >
                         </div>
                         <input
                           type="text"
@@ -636,6 +638,329 @@
               >
                 <div class="modal-box">
                   <h3 class="font-bold text-lg">Nueva ponencia</h3>
+                  <div class="flex flex-col justify-center items-center w-full">
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Descripcion del libro</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Titulo de la ponencia</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Contexto ponencia</span>
+                        </div>
+                        <select class="select select-bordered">
+                          <option disabled selected>
+                            Selecciona algun opcion
+                          </option>
+                          <option>Nacional</option>
+                          <option>Internacional</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Nombre del evento de ponencia</span
+                          >
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex flex-col w-full">
+                      <div class="label">
+                        <span class="label-text"
+                          >Certificacion de ponencia</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        class="file-input file-input-bordered file-input-primary w-full"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn">Cerrar</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row mt-10 mb-10">
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="C:\Users\USUARIO\Desktop\front-fesc\public\images\prodcuts.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Otros productos</h2>
+            <p>Dale click al siguiente boton e ingresa un nuevo producto</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_productos.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_productos"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box">
+                  <h3 class="font-bold text-lg">Nuevos productos</h3>
+                  <div class="flex flex-col justify-center items-center w-full">
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Descripcion del libro</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Titulo tesis 01</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Nivel</span>
+                        </div>
+                        <select class="select select-bordered">
+                          <option disabled selected>
+                            Selecciona algun opcion
+                          </option>
+                          <option>Pregrado</option>
+                          <option>Maestría</option>
+                          <option>Doctorado</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Nombre del autor</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Año</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Univesidad de presentacion</span
+                          >
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex flex-col w-full">
+                      <div class="label">
+                        <span class="label-text">Adjuntar el pdf de acta</span>
+                      </div>
+                      <input
+                        type="file"
+                        class="file-input file-input-bordered file-input-primary w-full"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn">Cerrar</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="C:\Users\USUARIO\Desktop\front-fesc\public\images\software.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nuevo registro de software</h2>
+            <p>
+              Dale click al siguiente boton e ingresa un nuevo registro de
+              software
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_software.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_software"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box">
+                  <h3 class="font-bold text-lg">Nuevo registro de software</h3>
+                  <div class="flex flex-col justify-center items-center w-full">
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Descripcion de la consultoria</span
+                          >
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Nombre de la empresa</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Año de la consultoria</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                      <div class="label">
+                        <span class="label-text"
+                          >Adjuntar contrato o convenio de la consultoría</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        class="file-input file-input-bordered file-input-primary w-full"
+                      />
+                    </div>
+                    <div class="flex flex-col w-full">
+                      <div class="label">
+                        <span class="label-text"
+                          >Ajuntar certificación de culminacion de
+                          consultoría</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        class="file-input file-input-bordered file-input-primary w-full"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn">Cerrar</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="C:\Users\USUARIO\Desktop\front-fesc\public\images\registro-marca.jpg"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Registro de marcas</h2>
+            <p>
+              Dale click al siguiente boton e ingresa un nuevo registro de
+              marcas
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_marcas.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_marcas"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box">
+                  <h3 class="font-bold text-lg">Nuevo registrro de marcas</h3>
                   <div class="flex flex-col justify-center items-center w-full">
                     <div class="flex w-full">
                       <label class="form-control w-full">
