@@ -82,10 +82,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\revistas.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\revistas.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nueva revista</h2>
@@ -99,85 +96,96 @@
                 id="my_modal_5"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nueva revista</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text"
-                            >Descripcion de la revista</span
-                          >
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo del articulo</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre de la revista</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año de publicacion</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text"
-                            >Categoría de revista segun Publindex</span
-                          >
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text">Ajuntar revista</span>
+                <form id="revistaForm">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva revista</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de la revista</span
+                            >
+                          </div>
+                          <input
+                            id="description"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Titulo del articulo</span>
+                          </div>
+                          <input
+                            id="tittle"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la revista</span>
+                          </div>
+                          <input
+                            id="name"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año de publicacion</span>
+                          </div>
+                          <input
+                            id="age"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Categoría de revista segun Publindex</span
+                            >
+                          </div>
+                          <input
+                            id="category"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar revista</span>
+                        </div>
+                        <input
+                          id="pdfFile"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="submit">Guardar</button>
+                        <button class="btn">Cerrar</button>
+                      </form>
                     </div>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
@@ -186,10 +194,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\libros.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\libros.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nuevo libro</h2>
@@ -285,10 +290,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\capitulos.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\capitulos.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nuevo capitulo de libro</h2>
@@ -403,10 +405,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\tesis.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\tesis.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nueva direccion de tesis</h2>
@@ -522,10 +521,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\consultoria.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\consultoria.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nueva consultoria</h2>
@@ -616,10 +612,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\consultoria.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\consultoria.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Ponencias</h2>
@@ -714,10 +707,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\prodcuts.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\prodcuts.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Otros productos</h2>
@@ -833,10 +823,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\software.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\software.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Nuevo registro de software</h2>
@@ -933,10 +920,7 @@
       <div class="flex w-full justify-center items-center">
         <div class="card card-compact w-80 bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="public\images\registro-marca.jpg"
-              alt="Shoes"
-            />
+            <img src="public\images\registro-marca.jpg" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">Registro de marcas</h2>

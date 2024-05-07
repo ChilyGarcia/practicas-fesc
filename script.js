@@ -112,3 +112,41 @@ document
         console.error("Error:", error);
       });
   });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("revistaForm")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("description").value,
+        tittle: document.getElementById("tittle").value,
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        category: document.getElementById("category").value,
+      };
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfFile");
+      var formData = new FormData();
+      formData.append("pdfFile", fileInput.files[0]);
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+      // Solicitud
+
+      fetch("http://localhost:8080/api/magazine/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
