@@ -216,7 +216,7 @@
                 id="mt_modal_6"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <form id="formBook">
+                <form id="formBook" method="dialog">
                   <div class="modal-box">
                     <h3 class="font-bold text-lg">Nuevo libro</h3>
                     <div
@@ -297,6 +297,7 @@
                     </div>
                     <div class="modal-action"></div>
                     <button type="submit" class="btn">Guardar</button>
+                    <button type="btn" class="btn">Cerrar</button>
                   </div>
                 </form>
               </dialog>
@@ -323,94 +324,103 @@
                 id="mt_modal_7"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevo capitulo de libro</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formChapter" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo capitulo de libro</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del capitulo</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del libro 01</span>
+                          </div>
+                          <input
+                            id="nameChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Titulo del capítulo 01</span
+                            >
+                          </div>
+                          <input
+                            id="tittleChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">ISBN</span>
+                          </div>
+                          <input
+                            id="isbnChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Editorial</span>
+                          </div>
+                          <input
+                            id="editorialChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Descripcion del capitulo</span
+                            >Adjuntar certificacion de la editorial del
+                            capitulo</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdf1Chapter"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre del libro 01</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo del capítulo 01</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">ISBN</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Editorial</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Adjuntar certificacion de la editorial del
-                          capitulo</span
-                        >
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text">Ajuntar PDF del libro</span>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar PDF del libro</span>
+                        </div>
+                        <input
+                          id="pdf2Chapter"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
                     </div>
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>

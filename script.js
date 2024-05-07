@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       isbn: document.getElementById("isbn").value,
     };
 
-    console.log(data)
+    console.log(data);
 
     // Crear un objeto FormData para el archivo
     var fileInput = document.getElementById("pdf1");
@@ -189,11 +189,56 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .then((data) => {
         console.log(data);
 
-        var modal = document.getElementById("my_modal_6");
+        var modal = document.getElementById("mt_modal_7");
         modal.close();
       })
       .catch((error) => {
         console.log(error);
       });
   });
+});
+
+// Formulario de capitulo
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formChapter")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionChapter").value,
+        name: document.getElementById("nameChapter").value,
+        tittle: document.getElementById("tittleChapter").value,
+        isbn: document.getElementById("isbnChapter").value,
+        editorial: document.getElementById("editorialChapter").value,
+      };
+
+      console.log(data);
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdf1Chapter");
+      var fileInput2 = document.getElementById("pdf2Chapter");
+      var formData = new FormData();
+      formData.append("pdf1Chapter", fileInput.files[0]);
+      formData.append("pdf2Chapter", fileInput2.files[0]); // Corregido aquí
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+
+      fetch("http://localhost:8080/api/newchapter/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("my_modal_6");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
 });
