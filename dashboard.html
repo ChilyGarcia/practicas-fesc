@@ -418,7 +418,10 @@
                         />
                       </div>
                     </div>
-                    <button type="submit" class="btn">Guardar</button>
+                    <div class="modal-action">
+                      <button type="submit" class="btn">Guardar</button>
+                      <button type="btn" class="btn">Cerrar</button>
+                    </div>
                   </div>
                 </form>
               </dialog>
@@ -449,97 +452,112 @@
                 id="mt_modal_8"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nueva direccion de tesis</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo tesis 01</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nivel</span>
-                        </div>
-                        <select class="select select-bordered">
-                          <option disabled selected>
-                            Selecciona algun opcion
-                          </option>
-                          <option>Pregrado</option>
-                          <option>Maestría</option>
-                          <option>Doctorado</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre del autor</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formTesis" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva direccion de tesis</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Descripcion de tesis</span>
+                          </div>
+                          <input
+                            id="descriptionTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Titulo tesis 01</span>
+                          </div>
+                          <input
+                            id="tittleTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nivel</span>
+                          </div>
+                          <select
+                            id="nivelTesis"
+                            class="select select-bordered"
+                          >
+                            <option disabled selected>
+                              Selecciona algun opcion
+                            </option>
+                            <option>Pregrado</option>
+                            <option>Maestría</option>
+                            <option>Doctorado</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del autor</span>
+                          </div>
+                          <input
+                            id="nameAutor"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="anoTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Univesidad de presentacion</span
+                            >
+                          </div>
+                          <input
+                            id="universidadTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Univesidad de presentacion</span
+                            >Adjuntar el pdf de acta</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdfTesis"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text">Adjuntar el pdf de acta</span>
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
+                    </div>
+
+                    <div class="modal-action">
+                      <button type="submit" class="btn">Guardar</button>
+                      <button type="btn" class="btn">Cerrar</button>
                     </div>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>

@@ -234,7 +234,53 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("my_modal_6");
+          var modal = document.getElementById("mt_modal_7");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
+
+// Formulario direccion de tesis
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formTesis")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionTesis").value,
+        tittle: document.getElementById("tittleTesis").value,
+        level: document.getElementById("nivelTesis").value,
+        name_autor: document.getElementById("nameAutor").value,
+        age: document.getElementById("anoTesis").value,
+        university: document.getElementById("universidadTesis").value,
+        pdf_thesis: document.getElementById("pdfTesis").value,
+      };
+
+      console.log(data);
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfTesis");
+      var formData = new FormData();
+      formData.append("pdfTesis", fileInput.files[0]);
+
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+
+      fetch("http://localhost:8080/api/newthesis/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("mt_modal_7");
           modal.close();
         })
         .catch((error) => {
