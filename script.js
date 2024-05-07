@@ -144,6 +144,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       })
         .then((data) => {
           console.log(data);
+
+          var modal = document.getElementById("my_modal_5");
+          modal.close();
         })
         .catch((error) => {
           console.log(error);
