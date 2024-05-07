@@ -216,80 +216,89 @@
                 id="mt_modal_6"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevo libro</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Editorial</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">ISBN</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Adjuntar certificacion de la editorial</span
-                        >
+                <form id="formBook">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo libro</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del libro</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionBook"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text">Ajuntar PDF del libro</span>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del libro</span>
+                          </div>
+                          <input
+                            id="nameBook"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Editorial</span>
+                          </div>
+                          <input
+                            id="editorial"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">ISBN</span>
+                          </div>
+                          <input
+                            id="isbn"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar certificacion de la editorial</span
+                          >
+                        </div>
+                        <input
+                          id="pdf1"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar PDF del libro</span>
+                        </div>
+                        <input
+                          id="pdf2"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
                     </div>
+                    <div class="modal-action"></div>
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>

@@ -113,6 +113,7 @@ document
       });
   });
 
+//Formulario revista
 document.addEventListener("DOMContentLoaded", (event) => {
   document
     .getElementById("revistaForm")
@@ -152,4 +153,47 @@ document.addEventListener("DOMContentLoaded", (event) => {
           console.log(error);
         });
     });
+});
+
+// Formulario libro
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.getElementById("formBook")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Crear un objeto para almacenar los datos del formulario
+    var data = {
+      description: document.getElementById("descriptionBook").value,
+      name: document.getElementById("nameBook").value,
+      editorial: document.getElementById("editorial").value,
+      isbn: document.getElementById("isbn").value,
+    };
+
+    console.log(data)
+
+    // Crear un objeto FormData para el archivo
+    var fileInput = document.getElementById("pdf1");
+    var fileInput2 = document.getElementById("pdf2");
+    var formData = new FormData();
+    formData.append("pdf1", fileInput.files[0]);
+    formData.append("pdf2", fileInput2.files[0]); // Corregido aquí
+    formData.append("json", JSON.stringify(data));
+
+    var id = localStorage.getItem("user_id");
+    // Solicitud
+
+    fetch("http://localhost:8080/api/newbook/" + id, {
+      method: "POST",
+      credentials: "include",
+      body: formData,
+    })
+      .then((data) => {
+        console.log(data);
+
+        var modal = document.getElementById("my_modal_6");
+        modal.close();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
 });
