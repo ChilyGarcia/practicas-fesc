@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .then((data) => {
         console.log(data);
 
-        var modal = document.getElementById("mt_modal_7");
+        var modal = document.getElementById("mt_modal_6");
         modal.close();
       })
       .catch((error) => {
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("mt_modal_7");
+          var modal = document.getElementById("mt_modal_chapter");
           modal.close();
         })
         .catch((error) => {
@@ -258,7 +258,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         name_author: document.getElementById("nameAutor").value,
         age: document.getElementById("anoTesis").value,
         university: document.getElementById("universidadTesis").value,
-        
       };
 
       console.log(data);
@@ -491,3 +490,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
+
+document
+  .getElementById("closeModalBook")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_6").close();
+  });
+
+document
+  .getElementById("closeModalMagazine")
+  ?.addEventListener("click", function () {
+    document.getElementById("my_modal_5").close();
+  });
+
+document
+  .getElementById("closeModalChapter")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_chapter").close();
+  });

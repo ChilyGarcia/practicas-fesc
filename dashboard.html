@@ -178,20 +178,11 @@
                         />
                       </div>
                     </div>
-                    <div class="modal-action">
-                      <form method="dialog">
-                        <button type="submit" class="btn">Guardar</button>
-                      </form>
-                      <button
-                        class="btn"
-                        onclick="() => {
-                            var modal = document.getElementById('my_modal_5');
-                            modal.close();
-                      }"
-                      >
-                        Cerrar
-                      </button>
-                    </div>
+
+                    <button type="submit" class="btn">Guardar</button>
+                    <button type="button" id="closeModalMagazine" class="btn">
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
@@ -297,7 +288,9 @@
                     </div>
                     <div class="modal-action"></div>
                     <button type="submit" class="btn">Guardar</button>
-                    <button type="btn" class="btn">Cerrar</button>
+                    <button type="button" id="closeModalBook" class="btn">
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
@@ -317,11 +310,11 @@
             </p>
             <div class="card-actions justify-end">
               <!-- MODAL -->
-              <button class="btn btn-primary" onclick="mt_modal_7.showModal()">
+              <button class="btn btn-primary" onclick="mt_modal_chapter.showModal()">
                 Nuevo
               </button>
               <dialog
-                id="mt_modal_7"
+                id="mt_modal_chapter"
                 class="modal modal-bottom sm:modal-middle"
               >
                 <form id="formChapter" method="dialog">
@@ -418,10 +411,11 @@
                         />
                       </div>
                     </div>
-                    <div class="modal-action">
-                      <button type="submit" class="btn">Guardar</button>
-                      <button type="btn" class="btn">Cerrar</button>
-                    </div>
+
+                    <button type="submit" class="btn">Guardar</button>
+                    <button type="button" id="closeModalChapter" class="btn">
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
