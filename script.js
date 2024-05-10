@@ -442,7 +442,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("mt_modal_productos");
+          var modal = document.getElementById("mt_modal_software");
           modal.close();
         })
         .catch((error) => {
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("mt_modal_productos");
+          var modal = document.getElementById("mt_modal_marcas");
           modal.close();
         })
         .catch((error) => {
@@ -525,4 +525,16 @@ document
   .getElementById("closeModalPresentation")
   ?.addEventListener("click", function () {
     document.getElementById("mt_modal_presentation").close();
+  });
+
+document
+  .getElementById("closeModalSoftware")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_software").close();
+  });
+
+document
+  .getElementById("closeModalTrademark")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_marcas").close();
   });
