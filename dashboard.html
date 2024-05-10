@@ -789,97 +789,42 @@
                 id="mt_modal_productos"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevos productos</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo tesis 01</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nivel</span>
-                        </div>
-                        <select class="select select-bordered">
-                          <option disabled selected>
-                            Selecciona algun opcion
-                          </option>
-                          <option>Pregrado</option>
-                          <option>Maestría</option>
-                          <option>Doctorado</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre del autor</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formOtherProducts" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevos productos</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del producto</span>
+                          </div>
+                          <input
+                            id="nameOtherProduct"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Univesidad de presentacion</span
+                            >Adjuntar evidencia producto</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdfFileOtherProduct"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text">Adjuntar el pdf de acta</span>
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
                     </div>
+
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
@@ -908,75 +853,80 @@
                 id="mt_modal_software"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevo registro de software</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formSoftwareRegistration" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">
+                      Nuevo registro de software
+                    </h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del registro de software</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del software</span>
+                          </div>
+                          <input
+                            id="nameSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Entidad que avala</span>
+                          </div>
+                          <input
+                            id="entitySoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="ageSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
                         <div class="label">
-                          <span class="label-text"
-                            >Descripcion de la consultoria</span
-                          >
+                          <span class="label-text">Adjuntar registro</span>
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdfFileSoftwareRegistration"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre de la empresa</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año de la consultoria</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
+                      </div>
                     </div>
 
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Adjuntar contrato o convenio de la consultoría</span
-                        >
-                      </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Ajuntar certificación de culminacion de
-                          consultoría</span
-                        >
-                      </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
@@ -1006,50 +956,37 @@
                 class="modal modal-bottom sm:modal-middle"
               >
                 <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevo registrro de marcas</h3>
+                  <h3 class="font-bold text-lg">Nuevo registro de marcas</h3>
                   <div class="flex flex-col justify-center items-center w-full">
                     <div class="flex w-full">
                       <label class="form-control w-full">
                         <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo de la ponencia</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Contexto ponencia</span>
-                        </div>
-                        <select class="select select-bordered">
-                          <option disabled selected>
-                            Selecciona algun opcion
-                          </option>
-                          <option>Nacional</option>
-                          <option>Internacional</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
                           <span class="label-text"
-                            >Nombre del evento de ponencia</span
+                            >Descripcion de registro de marca</span
                           >
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Nombre de la marca</span>
+                        </div>
+                        <input
+                          type="text"
+                          class="input input-bordered w-full"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="flex w-full">
+                      <label class="form-control w-full">
+                        <div class="label">
+                          <span class="label-text">Año</span>
                         </div>
                         <input
                           type="text"

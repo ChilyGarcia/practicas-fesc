@@ -372,3 +372,82 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
+
+// Formulario otros productos
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formOtherProducts")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        name: document.getElementById("nameOtherProduct").value,
+      };
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfFileOtherProduct");
+      var formData = new FormData();
+      formData.append("pdfFileOtherProduct", fileInput.files[0]);
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+      // Solicitud
+
+      fetch("http://localhost:8080/api/newotherproduct/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("mt_modal_productos");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
+
+// Formulario del registro de software
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formSoftwareRegistration")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionSoftware").value,
+        name: document.getElementById("nameSoftware").value,
+        entity: document.getElementById("entitySoftware").value,
+        age: document.getElementById("ageSoftware").value,
+      };
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfFileSoftwareRegistration");
+      var formData = new FormData();
+      formData.append("pdfFileSoftwareRegistration", fileInput.files[0]);
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+      // Solicitud
+
+      fetch("http://localhost:8080/api/newsoftwareregistration/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("mt_modal_productos");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
