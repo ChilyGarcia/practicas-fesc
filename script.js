@@ -255,24 +255,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
         description: document.getElementById("descriptionTesis").value,
         tittle: document.getElementById("tittleTesis").value,
         level: document.getElementById("nivelTesis").value,
-        name_autor: document.getElementById("nameAutor").value,
+        name_author: document.getElementById("nameAutor").value,
         age: document.getElementById("anoTesis").value,
         university: document.getElementById("universidadTesis").value,
-        pdf_thesis: document.getElementById("pdfTesis").value,
+        
       };
 
       console.log(data);
 
       // Crear un objeto FormData para el archivo
-      var fileInput = document.getElementById("pdfTesis");
+      var fileInput = document.getElementById("pdfThesisDirection");
       var formData = new FormData();
-      formData.append("pdfTesis", fileInput.files[0]);
+      formData.append("pdfThesisDirection", fileInput.files[0]);
 
       formData.append("json", JSON.stringify(data));
 
       var id = localStorage.getItem("user_id");
 
-      fetch("http://localhost:8080/api/newthesis/" + id, {
+      fetch("http://localhost:8080/api/newthesisdirection/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -436,6 +436,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // Solicitud
 
       fetch("http://localhost:8080/api/newsoftwareregistration/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("mt_modal_productos");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
+
+//Formulario registro de marcas
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formTrademarkRegistration")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionTrademark").value,
+        name: document.getElementById("nameTrademark").value,
+        age: document.getElementById("ageTrademark").value,
+      };
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfFileTrademarkRegistration");
+      var formData = new FormData();
+      formData.append("pdfFileTrademarkRegistration", fileInput.files[0]);
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+      // Solicitud
+
+      fetch("http://localhost:8080/api/newtrademarkregistration/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,

@@ -545,7 +545,7 @@
                           >
                         </div>
                         <input
-                          id="pdfTesis"
+                          id="pdfThesisDirection"
                           type="file"
                           class="file-input file-input-bordered file-input-primary w-full"
                         />
@@ -955,63 +955,68 @@
                 id="mt_modal_marcas"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nuevo registro de marcas</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formTrademarkRegistration" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo registro de marcas</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de registro de marca</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la marca</span>
+                          </div>
+                          <input
+                            id="nameTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="ageTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Descripcion de registro de marca</span
+                            >Certificacion de ponencia</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdfFileTrademarkRegistration"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Nombre de la marca</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
+                      </div>
                     </div>
 
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Certificacion de ponencia</span
-                        >
-                      </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
