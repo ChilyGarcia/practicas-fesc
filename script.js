@@ -288,3 +288,87 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
+
+// Formulario de consultoria
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formConsultancy")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionConsultancy").value,
+        name_company: document.getElementById("nameCompany").value,
+        age: document.getElementById("ageConsultancy").value,
+      };
+
+      console.log(data);
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdf1Consultancy");
+      var fileInput2 = document.getElementById("pdf2Consultancy");
+      var formData = new FormData();
+      formData.append("pdf1Consultancy", fileInput.files[0]);
+      formData.append("pdf2Consultancy", fileInput2.files[0]); // Corregido aquí
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+
+      fetch("http://localhost:8080/api/newconsultancy/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("mt_modal_9");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
+
+//Formulario de ponencia
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("formPresentation")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        description: document.getElementById("descriptionPresentation").value,
+        tittle: document.getElementById("tittlePresentation").value,
+        context: document.getElementById("contextPresentation").value,
+        name: document.getElementById("namePresentation").value,
+      };
+
+      // Crear un objeto FormData para el archivo
+      var fileInput = document.getElementById("pdfFilePresentation");
+      var formData = new FormData();
+      formData.append("pdfFilePresentation", fileInput.files[0]);
+      formData.append("json", JSON.stringify(data));
+
+      var id = localStorage.getItem("user_id");
+      // Solicitud
+
+      fetch("http://localhost:8080/api/newpresentation/" + id, {
+        method: "POST",
+        credentials: "include",
+        body: formData,
+      })
+        .then((data) => {
+          console.log(data);
+
+          var modal = document.getElementById("my_modal_10");
+          modal.close();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});

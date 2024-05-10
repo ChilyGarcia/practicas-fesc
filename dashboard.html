@@ -580,75 +580,83 @@
                 id="mt_modal_9"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nueva consultoria</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formConsultancy" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva consultoria</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de la consultoria</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionConsultancy"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la empresa</span>
+                          </div>
+                          <input
+                            id="nameCompany"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Año de la consultoria</span
+                            >
+                          </div>
+                          <input
+                            id="ageConsultancy"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Descripcion de la consultoria</span
+                            >Adjuntar contrato o convenio de la
+                            consultoría</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdf1Consultancy"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                      </div>
+                      <div class="flex flex-col w-full">
                         <div class="label">
-                          <span class="label-text">Nombre de la empresa</span>
+                          <span class="label-text"
+                            >Ajuntar certificación de culminacion de
+                            consultoría</span
+                          >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdf2Consultancy"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Año de la consultoria</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Adjuntar contrato o convenio de la consultoría</span
-                        >
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
                     </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Ajuntar certificación de culminacion de
-                          consultoría</span
-                        >
-                      </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
-                    </div>
+                    <button type="submit" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
@@ -671,76 +679,88 @@
                 id="mt_modal_10"
                 class="modal modal-bottom sm:modal-middle"
               >
-                <div class="modal-box">
-                  <h3 class="font-bold text-lg">Nueva ponencia</h3>
-                  <div class="flex flex-col justify-center items-center w-full">
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Descripcion del libro</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Titulo de la ponencia</span>
-                        </div>
-                        <input
-                          type="text"
-                          class="input input-bordered w-full"
-                        />
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
-                        <div class="label">
-                          <span class="label-text">Contexto ponencia</span>
-                        </div>
-                        <select class="select select-bordered">
-                          <option disabled selected>
-                            Selecciona algun opcion
-                          </option>
-                          <option>Nacional</option>
-                          <option>Internacional</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="flex w-full">
-                      <label class="form-control w-full">
+                <form id="formPresentation" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva ponencia</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del libro</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionPresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Titulo de la ponencia</span
+                            >
+                          </div>
+                          <input
+                            id="tittlePresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Contexto ponencia</span>
+                          </div>
+                          <select
+                            id="contextPresentation"
+                            class="select select-bordered"
+                          >
+                            <option disabled selected>
+                              Selecciona algun opcion
+                            </option>
+                            <option>Nacional</option>
+                            <option>Internacional</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Nombre del evento de ponencia</span
+                            >
+                          </div>
+                          <input
+                            id="namePresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
                         <div class="label">
                           <span class="label-text"
-                            >Nombre del evento de ponencia</span
+                            >Certificacion de ponencia</span
                           >
                         </div>
                         <input
-                          type="text"
-                          class="input input-bordered w-full"
+                          id="pdfFilePresentation"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
                         />
-                      </label>
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <div class="label">
-                        <span class="label-text"
-                          >Certificacion de ponencia</span
-                        >
                       </div>
-                      <input
-                        type="file"
-                        class="file-input file-input-bordered file-input-primary w-full"
-                      />
                     </div>
+
+                    <button type="btn" class="btn">Guardar</button>
                   </div>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <button class="btn">Cerrar</button>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </dialog>
             </div>
           </div>
