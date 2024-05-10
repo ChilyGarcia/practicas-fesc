@@ -1054,10 +1054,19 @@
       </div>
     </div>
 
-    <form id="uploadForm" enctype="multipart/form-data">
-      <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required />
-      <button type="submit">Subir PDF</button>
-    </form>
+    <div id="errorDiv" class="toast toast-end" style="display: none">
+      <div class="alert alert-error">
+        <span class="text-white"
+          >No se pudo realizar el registro correctamente</span
+        >
+      </div>
+    </div>
+
+    <div id="successDiv" class="toast toast-end" style="display: none">
+      <div class="alert alert-success">
+        <span class="text-white">Registro realizado con éxito</span>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

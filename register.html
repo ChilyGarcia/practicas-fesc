@@ -20,7 +20,7 @@
     <div class="flex items-center justify-center">
         <div class="relative w-[500px] flex flex-col m-16 space-y-8 bg-white shadow-2xl rounded-2xl min-w-[815px]">
           <div class="card-body items-center">
-            <img class="card-title w-[230px] h-[130px] mb-3 text-4xl" src="C:\Users\USUARIO\Desktop\front-fesc\public\icons\fesc-icon.png"></img>
+            <img class="card-title w-[230px] h-[130px] mb-3 text-4xl" src="public\icons\fesc-icon.png"></img>
       
             <div class="flex flex-col items-start">
               <label class="font-semibold">
@@ -28,28 +28,28 @@
               </label>
             </div>
       
-            <form id="registerForm">
+            <form id="registerForm" method="dialog">
               <div class="flex justify-between">
                 <div class="flex flex-col">
                   <div class="mt-2">
                     <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
                       Nombres
                     </span>
-                    <input name="name" type="text" placeholder="Juan" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                    <input id="nameRegister" name="name" type="text" placeholder="Juan" class="input input-bordered w-full max-w-xs ml-8 pr-8">
                   </div>
       
                   <div class="mt-2">
                     <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
                       Correo electrónico
                     </span>
-                    <input name="email" type="text" placeholder="ejemplo@gmail.com" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                    <input id="emailRegister" name="email" type="text" placeholder="ejemplo@gmail.com" class="input input-bordered w-full max-w-xs ml-8 pr-8">
                   </div>
       
                   <div class="mt-2">
                     <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
                       Contraseña
                     </span>
-                    <input name="password" type="password" placeholder="********" class="input input-bordered w-full max-w-xs ml-8 pr-8">
+                    <input id="passwordRegister" name="password" type="password" placeholder="********" class="input input-bordered w-full max-w-xs ml-8 pr-8">
                   </div>
                 </div>
       
@@ -58,14 +58,14 @@
                     <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
                       Apellidos
                     </span>
-                    <input name="last_name" type="text" placeholder="García" class="input input-bordered w-full max-w-xs ml-8">
+                    <input id="lastNameRegister" name="last_name" type="text" placeholder="García" class="input input-bordered w-full max-w-xs ml-8">
                   </div>
       
                   <div class="mt-2">
                     <span class="mb-2 text-sm font-semibold text-azul-intermoney ml-8">
                       Teléfono
                     </span>
-                    <input name="phone_number" type="text" placeholder="3209494848" class="input input-bordered w-full max-w-xs ml-8">
+                    <input id="phoneNumberRegister" name="phone_number" type="text" placeholder="3209494848" class="input input-bordered w-full max-w-xs ml-8">
                   </div>
                 </div>
               </div>
@@ -79,8 +79,21 @@
                   Volver
                 </a>
               </div>
+
             </form>
           </div>
+        </div>
+      </div>
+
+      <div id="errorDiv" class="toast toast-end" style="display: none">
+        <div class="alert alert-error">
+          <span class="text-white">No se pudo realizar el registro correctamente</span>
+        </div>
+      </div>
+
+      <div id="successDiv" class="toast toast-end" style="display: none">
+        <div class="alert alert-success">
+          <span class="text-white">Registro realizado con éxito</span>
         </div>
       </div>
       

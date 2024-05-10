@@ -1,3 +1,57 @@
+var errorDiv = document.getElementById("errorDiv");
+var successDiv = document.getElementById("successDiv");
+
+// Registro usuario
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .getElementById("registerForm")
+    ?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Crear un objeto para almacenar los datos del formulario
+      var data = {
+        name: document.getElementById("nameRegister").value,
+        email: document.getElementById("emailRegister").value,
+        password: document.getElementById("passwordRegister").value,
+        last_name: document.getElementById("lastNameRegister").value,
+        phone_number: document.getElementById("phoneNumberRegister").value,
+      };
+
+      console.log(data);
+
+      fetch("http://localhost:8080/api/register", {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((data) => {
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              location.href = "index.html";
+              successDiv.style.display = "none";
+            }, 2000);
+          }
+
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+});
+
 // Manejo del formulario de inicio de sesión
 document
   .getElementById("loginForm")
@@ -21,6 +75,12 @@ document
     })
       .then((response) => {
         if (!response.ok) {
+          errorDiv.style.display = "block";
+
+          setTimeout(() => {
+            errorDiv.style.display = "none";
+          }, 2000);
+
           throw new Error("Network response was not ok");
         }
 
@@ -33,6 +93,7 @@ document
           data &&
           data.error == "Correo electrónico o contraseña incorrectos"
         ) {
+          errorDiv.style.display = "none";
           console.log("Error: " + data.error);
           // Aquí podrías mostrar un mensaje de error al usuario
         } else {
@@ -144,10 +205,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
         body: formData,
       })
         .then((data) => {
-          console.log(data);
-
           var modal = document.getElementById("my_modal_5");
           modal.close();
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
+          console.log(data);
         })
         .catch((error) => {
           console.log(error);
@@ -191,6 +264,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         var modal = document.getElementById("mt_modal_6");
         modal.close();
+
+        if (data.status !== 200) {
+          errorDiv.style.display = "block";
+
+          setTimeout(() => {
+            errorDiv.style.display = "none";
+          }, 2000);
+        } else {
+          successDiv.style.display = "block";
+
+          setTimeout(() => {
+            successDiv.style.display = "none";
+          }, 2000);
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -236,6 +323,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_chapter");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -281,6 +382,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_thesis");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -324,6 +439,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_consultancy");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -365,6 +494,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_presentation");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -403,6 +546,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_productos");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -444,6 +601,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_software");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -484,6 +655,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
           var modal = document.getElementById("mt_modal_marcas");
           modal.close();
+
+          if (data.status !== 200) {
+            errorDiv.style.display = "block";
+
+            setTimeout(() => {
+              errorDiv.style.display = "none";
+            }, 2000);
+          } else {
+            successDiv.style.display = "block";
+
+            setTimeout(() => {
+              successDiv.style.display = "none";
+            }, 2000);
+          }
         })
         .catch((error) => {
           console.log(error);
