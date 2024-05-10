@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("mt_modal_7");
+          var modal = document.getElementById("mt_modal_thesis");
           modal.close();
         })
         .catch((error) => {
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("mt_modal_9");
+          var modal = document.getElementById("mt_modal_consultancy");
           modal.close();
         })
         .catch((error) => {
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((data) => {
           console.log(data);
 
-          var modal = document.getElementById("my_modal_10");
+          var modal = document.getElementById("mt_modal_presentation");
           modal.close();
         })
         .catch((error) => {
@@ -507,4 +507,22 @@ document
   .getElementById("closeModalChapter")
   ?.addEventListener("click", function () {
     document.getElementById("mt_modal_chapter").close();
+  });
+
+document
+  .getElementById("closeModalThesis")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_thesis").close();
+  });
+
+document
+  .getElementById("closeModalConsultancy")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_consultancy").close();
+  });
+
+document
+  .getElementById("closeModalPresentation")
+  ?.addEventListener("click", function () {
+    document.getElementById("mt_modal_presentation").close();
   });

@@ -310,7 +310,10 @@
             </p>
             <div class="card-actions justify-end">
               <!-- MODAL -->
-              <button class="btn btn-primary" onclick="mt_modal_chapter.showModal()">
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_chapter.showModal()"
+              >
                 Nuevo
               </button>
               <dialog
@@ -439,11 +442,14 @@
             </p>
             <div class="card-actions justify-end">
               <!-- MODAL -->
-              <button class="btn btn-primary" onclick="mt_modal_8.showModal()">
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_thesis.showModal()"
+              >
                 Nuevo
               </button>
               <dialog
-                id="mt_modal_8"
+                id="mt_modal_thesis"
                 class="modal modal-bottom sm:modal-middle"
               >
                 <form id="formTesis" method="dialog">
@@ -546,10 +552,10 @@
                       </div>
                     </div>
 
-                    <div class="modal-action">
-                      <button type="submit" class="btn">Guardar</button>
-                      <button type="btn" class="btn">Cerrar</button>
-                    </div>
+                    <button type="submit" class="btn">Guardar</button>
+                    <button type="button" id="closeModalThesis" class="btn">
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
@@ -567,11 +573,14 @@
             <p>Dale click al siguiente boton e ingresa una nueva consultoria</p>
             <div class="card-actions justify-end">
               <!-- MODAL -->
-              <button class="btn btn-primary" onclick="mt_modal_9.showModal()">
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_consultancy.showModal()"
+              >
                 Nuevo
               </button>
               <dialog
-                id="mt_modal_9"
+                id="mt_modal_consultancy"
                 class="modal modal-bottom sm:modal-middle"
               >
                 <form id="formConsultancy" method="dialog">
@@ -648,7 +657,15 @@
                         />
                       </div>
                     </div>
+
                     <button type="submit" class="btn">Guardar</button>
+                    <button
+                      type="button"
+                      id="closeModalConsultancy"
+                      class="btn"
+                    >
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
@@ -666,11 +683,14 @@
             <p>Dale click al siguiente boton e ingresa una nueva ponencia</p>
             <div class="card-actions justify-end">
               <!-- MODAL -->
-              <button class="btn btn-primary" onclick="mt_modal_10.showModal()">
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_presentation.showModal()"
+              >
                 Nuevo
               </button>
               <dialog
-                id="mt_modal_10"
+                id="mt_modal_presentation"
                 class="modal modal-bottom sm:modal-middle"
               >
                 <form id="formPresentation" method="dialog">
@@ -752,7 +772,14 @@
                       </div>
                     </div>
 
-                    <button type="btn" class="btn">Guardar</button>
+                    <button type="submit" class="btn">Guardar</button>
+                    <button
+                      type="button"
+                      id="closeModalPresentation"
+                      class="btn"
+                    >
+                      Cerrar
+                    </button>
                   </div>
                 </form>
               </dialog>
