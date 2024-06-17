@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       console.log(data);
 
-      fetch("http://localhost:8080/api/register", {
+      fetch("https://ingenieriaibero.com/api-register-user", {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(data),
@@ -65,7 +65,7 @@ document
       formObject[key] = value;
     });
 
-    fetch("http://localhost:8080/api/login", {
+    fetch("https://ingenieriaibero.com/api-login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -111,8 +111,9 @@ document
 document.getElementById("btnLogOut")?.addEventListener("click", function () {
   console.log("El botón Cerrar sesión ha sido presionado.");
 
-  fetch("http://localhost:8080/api/logOut", {
-    method: "GET",
+  fetch("https://ingenieriaibero.com/api-logout", {
+    method: "POST",
+    body: {},
     credentials: "include", // Enviar cookies
   })
     .then((response) => response.json())
@@ -155,7 +156,7 @@ document
         console.error("Error:", error);
       });
 
-    fetch("http://localhost:8080/api/user", {
+    fetch("https://ingenieriaibero.com/api-new-magazine", {
       credentials: "include", // Enviar cookies
     })
       .then((response) => {
@@ -199,7 +200,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       var id = localStorage.getItem("user_id");
       // Solicitud
 
-      fetch("http://localhost:8080/api/magazine/" + id, {
+      fetch("https://ingenieriaibero.com/api-new-magazine/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -254,7 +255,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     var id = localStorage.getItem("user_id");
     // Solicitud
 
-    fetch("http://localhost:8080/api/newbook/" + id, {
+    fetch("https://ingenieriaibero.com/api-newbook/" + id, {
       method: "POST",
       credentials: "include",
       body: formData,
@@ -313,7 +314,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       var id = localStorage.getItem("user_id");
 
-      fetch("http://localhost:8080/api/newchapter/" + id, {
+      fetch("https://ingenieriaibero.com/api-new-chapter/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -372,7 +373,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       var id = localStorage.getItem("user_id");
 
-      fetch("http://localhost:8080/api/newthesisdirection/" + id, {
+      fetch("https://ingenieriaibero.com/api-new-thesis/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -429,7 +430,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       var id = localStorage.getItem("user_id");
 
-      fetch("http://localhost:8080/api/newconsultancy/" + id, {
+      fetch("https://ingenieriaibero.com/api-new-consultancy/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -484,7 +485,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       var id = localStorage.getItem("user_id");
       // Solicitud
 
-      fetch("http://localhost:8080/api/newpresentation/" + id, {
+      fetch("https://ingenieriaibero.com/api-new-presentation/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -536,7 +537,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       var id = localStorage.getItem("user_id");
       // Solicitud
 
-      fetch("http://localhost:8080/api/newotherproduct/" + id, {
+      fetch("https://ingenieriaibero.com/api-other-product/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -591,7 +592,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       var id = localStorage.getItem("user_id");
       // Solicitud
 
-      fetch("http://localhost:8080/api/newsoftwareregistration/" + id, {
+      fetch("https://ingenieriaibero.com/api-software-registration/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -645,7 +646,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       var id = localStorage.getItem("user_id");
       // Solicitud
 
-      fetch("http://localhost:8080/api/newtrademarkregistration/" + id, {
+      fetch("https://ingenieriaibero.com/api-trademark-registration/" + id, {
         method: "POST",
         credentials: "include",
         body: formData,
